@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "rails_vscode_container_setup/version"
+require "setup_vscode_devcontainer/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "rails-vscode-container-setup"
-  spec.version       = RailsVscodeContainerSetup::VERSION
+  spec.name          = "setup-vscode-devcontainer"
+  spec.version       = SetupVSCodeDevcontainer::VERSION
   spec.authors       = ["John Carney"]
   spec.email         = ["john@carney.id.au"]
 
   spec.summary       = %q{Sets up a Visual Studio Code dev container for a rails app.}
   spec.description   = %q{Sets up a Visual Studio Code dev container for a rails app.}
-  spec.homepage      = "https://github.com/johncarney/rails-vscode-container-setup"
+  spec.homepage      = "https://github.com/johncarney/setup-vscode-devcontainer"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
   spec.bindir        = "bin"
-  spec.executables   = %w[rails-vscode-container-setup]
+  spec.executables   = %w[setup-vscode-devcontainer]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.17"

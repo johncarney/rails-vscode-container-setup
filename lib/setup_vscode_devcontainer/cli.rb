@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RailsVscodeContainerSetup
+module SetupVSCodeDevcontainer
   class CLI
     def initialize(*argv)
       @argv = argv
