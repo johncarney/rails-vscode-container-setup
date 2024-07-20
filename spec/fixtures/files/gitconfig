@@ -1,0 +1,24 @@
+[user]
+	email = ada.lovelace@example.com
+	name = Ada Lovelace
+	signingkey = /Users/johncarney/.ssh/id_ed25519.pub
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[core]
+	excludesfile = /Users/johncarney/.gitignore
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Users/johncarney/.ssh/allowed_signers
+
+[blank]
+  value = "  "

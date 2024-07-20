@@ -1,9 +1,14 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "rails/vscode/container/setup"
+
+require "support/file_fixture_helper"
+
+require "simplecov" if %w[yes y true 1].include? ENV["COVERAGE"]&.downcase
 
 RSpec.configure do |config|
+  include FileFixtureHelper
+
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
 
